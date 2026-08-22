@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Birthday Surprise 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<audio id="music" loop>
+  <!-- Put your music file in assets/music.mp3 -->
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+  <!-- 1. WELCOME -->
+  <section class="screen active" id="welcome">
+    <div class="glow"></div>
+    <div class="teddy">🧸</div>
+    <p class="tiny">A LITTLE SURPRISE FOR</p>
+    <h1>Purvviiii 💗</h1>
+    <p class="sub">Tap the button to begin...</p>
+    <button onclick="nextScreen('special')">Let's Go ✨</button>
+  </section>
+
+  <!-- 2. SPECIAL MESSAGE -->
+  <section class="screen" id="special">
+    <div class="card">
+      <div class="heart">♥</div>
+      <p class="tiny">JUST WANTED TO SAY...</p>
+      <h2>You are<br><span>so special</span> ✨</h2>
+      <p>Replace this text with your own little message.</p>
+    </div>
+    <button onclick="nextScreen('cake')">Next 💕</button>
+  </section>
+
+  <!-- 3. CAKE -->
+  <section class="screen" id="cake">
+    <p class="tiny">ONE MORE THING...</p>
+    <h2>Make a wish 🎂</h2>
+    <div class="cake-wrap" onclick="decorateCake()">
+      <div class="flame" id="flame">🔥</div>
+      <div class="candle">│</div>
+      <div class="cake-top"></div>
+      <div class="cake-body"></div>
+      <div class="plate"></div>
+    </div>
+    <p id="cakeHint">Tap the cake to light the candles ✨</p>
+    <button id="cakeNext" class="hidden" onclick="nextScreen('memories')">Continue 💗</button>
+  </section>
+
+  <!-- 4. MEMORIES -->
+  <section class="screen" id="memories">
+    <p class="tiny">OUR LITTLE MEMORIES</p>
+    <h2>Favorite moments 📸</h2>
+
+    <div class="photo-stack">
+      <div class="photo-card"><img src="assets/photo1.jpg"><span>[Caption 1]</span></div>
+      <div class="photo-card"><img src="assets/photo2.jpg"><span>[Caption 2]</span></div>
+      <div class="photo-card"><img src="assets/photo3.jpg"><span>[Caption 3]</span></div>
+      <div class="photo-card"><img src="assets/photo4.jpg"><span>[Caption 4]</span></div>
+    </div>
+
+    <p class="hint">Swipe / drag the cards →</p>
+    <button onclick="nextScreen('letter')">Next 💌</button>
+  </section>
+
+  <!-- 5. LETTER -->
+  <section class="screen" id="letter">
+    <div class="letter">
+      <div class="letter-top">💌</div>
+      <h2>A letter for you</h2>
+      <p>
+        Dear Purvviiii,<br><br>
+        [WRITE YOUR LETTER HERE. You can make it as long as you want.]
+        <br><br>
+        [ADD YOUR OWN MEMORIES, INSIDE JOKES OR WISHES HERE.]
+        <br><br>
+        With lots of love,<br>
+        [YOUR NAME] ❤️
+      </p>
+    </div>
+    <button onclick="nextScreen('final')">One last thing ✨</button>
+  </section>
+
+  <!-- 6. FINAL -->
+  <section class="screen" id="final">
+    <div class="confetti" id="confetti"></div>
+    <div class="final-heart">❤️</div>
+    <p class="tiny">AND FINALLY...</p>
+    <h1>Happy Birthday,<br><span>Purvviiii!</span> 🎂</h1>
+    <p class="sub">May your day be as beautiful as you are.</p>
+    <button onclick="replay()">Replay ↻</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
