@@ -1889,47 +1889,7 @@ sitButton.addEventListener(
    LOAD PHOTOS
 ========================= */
 
-const photos =
-  document.querySelectorAll(
-    ".photo-placeholder[data-photo]"
-  );
 
-photos.forEach(function(box){
-
-  const number =
-    box.getAttribute("data-photo");
-
-  const image =
-    document.createElement("img");
-
-  image.src =
-    number + ".jpg";
-
-  image.alt =
-    "Memory " + number;
-
-  image.style.width =
-    "100%";
-
-  image.style.height =
-    "100%";
-
-  image.style.objectFit =
-    "cover";
-
-  image.style.display =
-    "block";
-
-  image.onerror =
-    function(){
-
-      console.log(
-        "Photo not found: " +
-        number +
-        ".jpg"
-      );
-
-    };
 
   box.appendChild(image);
 
