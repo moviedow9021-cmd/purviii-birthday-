@@ -159,7 +159,7 @@ h1,h2{
 
 .road{
   width:100%;
-  height:210px;
+  height:140px;
   position:relative;
   margin-top:35px;
   overflow:hidden;
@@ -172,7 +172,7 @@ h1,h2{
   position:absolute;
 
   left:0;
-  bottom:55px;
+  bottom:35px;
 
   width:200%;
   height:7px;
@@ -1465,24 +1465,23 @@ const scootySection =
   document.getElementById("scootySection");
 
 
-sitButton.addEventListener(
-  "click",
-  function(){
+sitButton.addEventListener("click", function(){
 
-    scootySection.classList.add("riding");
+  scootySection.classList.add("riding");
 
-    setTimeout(function(){
+  birthdaySong.play().catch(function(){});
 
-      document
-        .querySelector(".hero")
-        .scrollIntoView({
-          behavior:"smooth"
-        });
+  setTimeout(function(){
 
-    },3800);
+    document
+      .querySelector(".hero")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
 
-  }
-);
+  }, 3800);
+
+});
 const birthdaySong =
   document.getElementById("birthdaySong");
 
