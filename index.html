@@ -1467,9 +1467,13 @@ const scootySection =
 
 sitButton.addEventListener("click", function(){
 
-  scootySection.classList.add("riding");
-
   birthdaySong.play().catch(function(){});
+
+  const scooty = document.getElementById("scooty");
+
+  scooty.style.left = "120%";
+
+  scootySection.classList.add("riding");
 
   setTimeout(function(){
 
