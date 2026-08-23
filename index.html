@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For Purvviiii ❤️</title>
 
@@ -32,7 +29,7 @@ section{
   width:100%;
   max-width:900px;
   margin:auto;
-  padding:70px 20px;
+  padding:75px 20px;
 }
 
 h1,h2{
@@ -47,72 +44,47 @@ h1,h2{
   margin-bottom:15px;
 }
 
-
-/* =========================
-   INTRO
-========================= */
+/* INTRO */
 
 #intro{
-
   position:fixed;
-
   inset:0;
-
   z-index:99999;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fff5f5,
-      #ffe8ec
-    );
-
+  background:linear-gradient(145deg,#fff5f5,#ffe8ec);
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   flex-direction:column;
-
-  transition:
-    opacity 1s ease;
-
-}
-
-#intro.hide{
-
-  opacity:0;
-
+  animation:introDisappear 3s forwards;
   pointer-events:none;
-
 }
 
 .intro-heart{
-
   font-size:70px;
-
-  animation:
-    heartbeat 1.3s infinite;
-
+  animation:heartbeat 1.3s infinite;
 }
 
 .intro-text{
-
   margin-top:18px;
-
   font-family:Georgia,serif;
-
   font-size:24px;
-
   color:#7d4d59;
-
   text-align:center;
+}
 
+@keyframes introDisappear{
+  0%,70%{
+    opacity:1;
+    visibility:visible;
+  }
+
+  100%{
+    opacity:0;
+    visibility:hidden;
+  }
 }
 
 @keyframes heartbeat{
-
   0%,100%{
     transform:scale(1);
   }
@@ -120,32 +92,19 @@ h1,h2{
   50%{
     transform:scale(1.15);
   }
-
 }
 
-
-/* =========================
-   SCOOTY SECTION
-========================= */
+/* SCOOTY */
 
 .scooty-section{
-
   min-height:100vh;
-
   max-width:100%;
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   flex-direction:column;
-
   text-align:center;
-
   position:relative;
-
   overflow:hidden;
 
   background:
@@ -155,44 +114,28 @@ h1,h2{
       #ffeef2 65%,
       #f8e5df
     );
-
 }
 
 .cloud{
-
   position:absolute;
-
   font-size:50px;
-
   opacity:.45;
-
-  animation:
-    cloudMove 18s linear infinite;
-
+  animation:cloudMove 18s linear infinite;
   pointer-events:none;
-
 }
 
 .cloud1{
-
   top:15%;
-
   left:-100px;
-
 }
 
 .cloud2{
-
   top:30%;
-
   left:-250px;
-
   animation-delay:7s;
-
 }
 
 @keyframes cloudMove{
-
   from{
     transform:translateX(0);
   }
@@ -200,60 +143,34 @@ h1,h2{
   to{
     transform:translateX(120vw);
   }
-
 }
 
 .scooty-title{
-
-  font-size:
-    clamp(40px,9vw,70px);
-
+  font-size:clamp(40px,9vw,70px);
   color:#633f49;
-
   margin-bottom:10px;
-
 }
 
 .scooty-subtitle{
-
   font-size:22px;
-
   color:#80636b;
-
   line-height:1.6;
-
 }
 
-
-/* ROAD */
-
 .road{
-
   width:100%;
-
   height:210px;
-
   position:relative;
-
   margin-top:35px;
-
   overflow:hidden;
-
-  border-bottom:
-    5px solid #9c7b82;
-
+  border-bottom:5px solid #9c7b82;
 }
 
 .road-lines{
-
   position:absolute;
-
   left:0;
-
   bottom:32px;
-
   width:200%;
-
   height:5px;
 
   background:
@@ -262,22 +179,13 @@ h1,h2{
       #c49da5 0 70px,
       transparent 70px 130px
     );
-
-  animation:
-    roadMove .8s linear infinite;
-
-  animation-play-state:paused;
-
 }
 
 .riding .road-lines{
-
-  animation-play-state:running;
-
+  animation:roadMove .8s linear infinite;
 }
 
 @keyframes roadMove{
-
   from{
     transform:translateX(0);
   }
@@ -285,25 +193,16 @@ h1,h2{
   to{
     transform:translateX(-130px);
   }
-
 }
 
-
-/* SCOOTY */
-
 .scooty{
-
   position:absolute;
-
   left:50%;
-
   bottom:35px;
 
-  transform:
-    translateX(-50%);
+  transform:translateX(-50%);
 
   width:180px;
-
   height:130px;
 
   z-index:10;
@@ -311,19 +210,14 @@ h1,h2{
   transition:
     left 3.5s
     cubic-bezier(.6,0,.9,.4);
-
 }
 
 .scooty-placeholder{
-
   width:180px;
-
   height:110px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   font-size:100px;
@@ -333,35 +227,24 @@ h1,h2{
       0 12px 12px
       rgba(80,40,50,.2)
     );
-
 }
 
 .riding .scooty{
-
   left:120%;
-
 }
 
-
-/* BUTTON */
-
 .sit-button{
-
   margin-top:25px;
 
   border:none;
-
   border-radius:50px;
 
-  padding:
-    16px 30px;
+  padding:16px 30px;
 
   background:#d98799;
-
   color:white;
 
   font-size:16px;
-
   font-weight:bold;
 
   cursor:pointer;
@@ -369,33 +252,17 @@ h1,h2{
   box-shadow:
     0 10px 25px
     rgba(120,50,70,.2);
-
-  transition:
-    transform .2s ease,
-    opacity .4s ease;
-
-}
-
-.sit-button:active{
-
-  transform:scale(.94);
-
 }
 
 .riding .sit-button{
-
   opacity:0;
-
   pointer-events:none;
-
 }
 
 .ride-message{
-
   position:absolute;
 
   bottom:25px;
-
   left:50%;
 
   transform:
@@ -404,203 +271,130 @@ h1,h2{
   opacity:0;
 
   font-size:21px;
-
   color:#8d5967;
 
   transition:
     opacity .7s ease,
     transform .7s ease;
-
 }
 
 .riding .ride-message{
-
   opacity:1;
 
   transform:
     translate(-50%,0);
-
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-
   min-height:100vh;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   flex-direction:column;
 
   text-align:center;
-
 }
 
 .hero .tiny{
-
   font-size:25px;
-
   color:#a86a78;
-
 }
 
 .hero h1{
-
-  font-size:
-    clamp(50px,12vw,100px);
-
+  font-size:clamp(50px,12vw,100px);
   color:#593c45;
-
   margin:5px 0;
-
 }
 
 .hero .subtitle{
-
   font-size:25px;
-
   color:#9a6673;
-
 }
 
-
-/* =========================
-   REVEAL
-========================= */
+/* BIRTHDAY REVEAL */
 
 .reveal{
-
   min-height:90vh;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   flex-direction:column;
 
   text-align:center;
-
 }
 
 .cake{
-
   font-size:85px;
-
   margin-bottom:20px;
 
   animation:
     cakeFloat 3s
     ease-in-out infinite;
-
 }
 
 @keyframes cakeFloat{
-
   50%{
-
     transform:
       translateY(-10px)
       rotate(2deg);
-
   }
-
 }
 
 .reveal h2{
-
-  font-size:
-    clamp(38px,8vw,65px);
-
+  font-size:clamp(38px,8vw,65px);
   color:#633f49;
-
 }
 
 .reveal p{
-
   max-width:600px;
-
   color:#80636b;
-
   line-height:1.8;
-
 }
 
-
-/* =========================
-   MEMORY
-========================= */
+/* MEMORY */
 
 .memory-section{
-
   background:#fff;
-
   max-width:100%;
-
 }
 
 .memory-intro{
-
   max-width:900px;
-
-  margin:
-    0 auto 50px;
-
+  margin:0 auto 50px;
   text-align:center;
-
 }
 
 .memory-intro p{
-
   max-width:600px;
-
   margin:auto;
-
   color:#866b72;
-
   line-height:1.8;
-
 }
 
 .letter{
-
   max-width:720px;
-
   margin:auto;
-
 }
 
 .letter-block{
-
   margin:70px 0;
-
 }
 
 .letter-text{
-
   font-size:27px;
-
   line-height:1.55;
-
   color:#4c3940;
-
 }
 
-
-/* =========================
-   PHOTOS
-========================= */
+/* PHOTOS */
 
 .photo-grid{
-
   display:grid;
 
   grid-template-columns:
@@ -609,11 +403,9 @@ h1,h2{
   gap:25px;
 
   margin:30px 0;
-
 }
 
 .photo-card{
-
   background:#fff;
 
   padding:
@@ -628,28 +420,21 @@ h1,h2{
 
   transition:
     transform .5s ease;
-
 }
 
 .photo-card:nth-child(even){
-
   transform:
     rotate(2.5deg);
-
 }
 
 .photo-card:hover{
-
   transform:
     rotate(0deg)
     scale(1.03);
-
 }
 
 .photo-placeholder{
-
   width:100%;
-
   aspect-ratio:1/1;
 
   background:
@@ -662,7 +447,6 @@ h1,h2{
   display:flex;
 
   align-items:center;
-
   justify-content:center;
 
   flex-direction:column;
@@ -674,41 +458,18 @@ h1,h2{
   padding:15px;
 
   overflow:hidden;
-
 }
 
 .photo-placeholder img{
-
   width:100%;
-
   height:100%;
 
   object-fit:cover;
 
   display:block;
-
-}
-
-.photo-number{
-
-  font-family:Georgia,serif;
-
-  font-size:35px;
-
-  color:#b47c87;
-
-}
-
-.photo-hint{
-
-  font-size:20px;
-
-  margin-top:7px;
-
 }
 
 .caption{
-
   font-size:20px;
 
   margin-top:8px;
@@ -716,19 +477,14 @@ h1,h2{
   text-align:center;
 
   color:#76545e;
-
 }
 
 .single-photo{
-
   max-width:430px;
-
   margin:35px auto;
-
 }
 
 .three-grid{
-
   display:grid;
 
   grid-template-columns:
@@ -737,16 +493,12 @@ h1,h2{
   gap:15px;
 
   margin:30px 0;
-
 }
-
-
 /* =========================
    MUSIC
 ========================= */
 
 .music-section{
-
   text-align:center;
 
   background:
@@ -763,37 +515,26 @@ h1,h2{
   max-width:850px;
 
   padding:60px 25px;
-
 }
 
 .music-icon{
-
   font-size:55px;
-
+  margin-bottom:15px;
 }
 
 .music-title{
-
   font-family:Georgia,serif;
-
   font-size:28px;
-
 }
 
 .music-artist{
-
   color:#98747c;
-
   margin:7px 0 25px;
-
 }
 
 .music-note{
-
   color:#9a6975;
-
   font-size:18px;
-
 }
 
 
@@ -802,13 +543,10 @@ h1,h2{
 ========================= */
 
 .final{
-
   min-height:100vh;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   flex-direction:column;
@@ -821,49 +559,39 @@ h1,h2{
       #fff0f3,
       #fff8f7 60%
     );
-
 }
 
 .final-heart{
-
   font-size:90px;
 
   animation:
     heartbeat 1.3s infinite;
-
 }
 
 .final h2{
-
   font-size:
     clamp(40px,9vw,75px);
 
   color:#633e49;
-
 }
 
 .final-love{
-
   font-size:38px;
 
   color:#9c5969;
 
   margin-top:10px;
-
 }
 
 .final-sub{
-
   margin-top:30px;
 
   font-size:25px;
 
   color:#81616a;
-
 }
 
 .collage{
-
   max-width:700px;
 
   margin:50px auto;
@@ -874,7 +602,14 @@ h1,h2{
     repeat(3,1fr);
 
   gap:12px;
+}
 
+.collage .photo-placeholder{
+  aspect-ratio:1/1;
+}
+
+.collage .photo-card{
+  padding:7px;
 }
 
 
@@ -885,42 +620,34 @@ h1,h2{
 @media(max-width:600px){
 
   section{
-
     padding:
       60px 17px;
-
   }
 
   .letter-text{
-
     font-size:25px;
-
   }
 
   .photo-grid{
-
     gap:16px;
-
   }
 
   .three-grid{
-
     gap:8px;
+  }
 
+  .photo-card{
+    padding:
+      8px 8px 20px;
   }
 
   .scooty{
-
     width:140px;
-
   }
 
   .scooty-placeholder{
-
     width:140px;
-
     font-size:80px;
-
   }
 
 }
@@ -928,10 +655,13 @@ h1,h2{
 </style>
 </head>
 
+
 <body>
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <div id="intro">
 
@@ -946,7 +676,9 @@ h1,h2{
 </div>
 
 
-<!-- SCOOTY -->
+<!-- =========================
+     SCOOTY
+========================= -->
 
 <section
   class="scooty-section"
@@ -972,6 +704,7 @@ h1,h2{
 
     Pehle scooty pe baitho...
     <br>
+
     phir birthday adventure shuru karte hain 😏
 
   </p>
@@ -1009,7 +742,9 @@ h1,h2{
 </section>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -1026,7 +761,11 @@ h1,h2{
   </div>
 
 </section>
-<!-- BIRTHDAY REVEAL -->
+
+
+<!-- =========================
+     BIRTHDAY REVEAL
+========================= -->
 
 <section class="reveal">
 
@@ -1039,23 +778,33 @@ h1,h2{
   </div>
 
   <h2>
+
     Happiest Birthday
     <br>
+
     Purvosaurus gujraticus 😘
+
   </h2>
 
   <p>
+
     21 years old.
     <br>
-    And somehow I have survived being with you for 4 birthdays.
+
+    And somehow I have survived
+    being with you for 4 birthdays.
     <br>
+
     Honestly, not bad. 😏
+
   </p>
 
 </section>
 
 
-<!-- MEMORY / LETTER -->
+<!-- =========================
+     MEMORY
+========================= -->
 
 <section class="memory-section">
 
@@ -1070,9 +819,12 @@ h1,h2{
     </h2>
 
     <p>
+
       Scroll karte rehna...
       photos beech beech mein aayengi.
-      Exactly jaise meri memories tere saath aati rehti hain. ❤️
+      Exactly jaise meri memories
+      tere saath aati rehti hain. ❤️
+
     </p>
 
   </div>
@@ -1091,7 +843,10 @@ h1,h2{
 
         <br><br>
 
-        Dekhte dekhte 4th birthday aagya tera 😱 nasib kitna ganda ki abtk ek hi baar sathme cake kaata hai wo bhi tu bhaav khati thi tab 😏
+        Dekhte dekhte 4th birthday aagya tera 😱
+        nasib kitna ganda ki abtk ek hi baar
+        sathme cake kaata hai wo bhi tu bhaav
+        khati thi tab 😏
 
       </div>
 
@@ -1099,22 +854,18 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="1">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              01
-            </div>
-
-            <div class="photo-hint">
-              cake memory yaha ❤️
-            </div>
+            <img
+              src="1.jpg"
+              alt="Cake memory">
 
           </div>
 
           <div class="caption">
+
             our very limited cake-cutting history 😭
+
           </div>
 
         </div>
@@ -1134,7 +885,8 @@ h1,h2{
 
         <br><br>
 
-        Im happy ki tu ab doctor banne wali hai bhot mehnat kiya hai tune ye sab me
+        Im happy ki tu ab doctor banne wali hai
+        bhot mehnat kiya hai tune ye sab me
 
         <br><br>
 
@@ -1146,17 +898,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="2">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              02
-            </div>
-
-            <div class="photo-hint">
-              doctor / proud moment 👩🏻‍⚕️
-            </div>
+            <img
+              src="2.jpg"
+              alt="Doctor memory">
 
           </div>
 
@@ -1177,7 +923,9 @@ h1,h2{
 
       <div class="letter-text">
 
-        Aur bhi happy ki you have friends acche dost hai terepass jinse baat vgere hoti rahe i hope aisa hamesha rahe
+        Aur bhi happy ki you have friends
+        acche dost hai terepass jinse baat
+        vgere hoti rahe i hope aisa hamesha rahe
 
       </div>
 
@@ -1185,17 +933,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="3">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              03
-            </div>
-
-            <div class="photo-hint">
-              friends memory
-            </div>
+            <img
+              src="3.jpg"
+              alt="Friends memory">
 
           </div>
 
@@ -1204,17 +946,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="4">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              04
-            </div>
-
-            <div class="photo-hint">
-              friends memory
-            </div>
+            <img
+              src="4.jpg"
+              alt="Friends memory">
 
           </div>
 
@@ -1231,7 +967,8 @@ h1,h2{
 
       <div class="letter-text">
 
-        21 saal ki hogai bhai mila tha tab 18 ki thi bacchi thi
+        21 saal ki hogai bhai
+        mila tha tab 18 ki thi bacchi thi
 
       </div>
 
@@ -1239,22 +976,18 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="5">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              05
-            </div>
-
-            <div class="photo-hint">
-              18 → 21 🥹
-            </div>
+            <img
+              src="5.jpg"
+              alt="18 to 21 memory">
 
           </div>
 
           <div class="caption">
+
             bacchi se 21-year-old 😭
+
           </div>
 
         </div>
@@ -1270,7 +1003,8 @@ h1,h2{
 
       <div class="letter-text">
 
-        Abhi badi hogai hai pregnantable hogai hai 🤫☺️
+        Abhi badi hogai hai pregnantable hogai hai
+        🤫☺️
 
       </div>
 
@@ -1278,17 +1012,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="6">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              06
-            </div>
-
-            <div class="photo-hint">
-              🤫 this one stays between us
-            </div>
+            <img
+              src="6.jpg"
+              alt="Private memory">
 
           </div>
 
@@ -1313,17 +1041,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="7">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              07
-            </div>
-
-            <div class="photo-hint">
-              us ❤️
-            </div>
+            <img
+              src="7.jpg"
+              alt="Us memory">
 
           </div>
 
@@ -1332,9 +1054,7 @@ h1,h2{
       </div>
 
     </div>
-
-
-    <!-- PHOTO 8-12 -->
+        <!-- PHOTO 8-12 -->
 
     <div class="letter-block">
 
@@ -1345,83 +1065,33 @@ h1,h2{
       <div class="photo-grid">
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="8">
-
-            <div class="photo-number">08</div>
-
-            <div class="photo-hint">
-              travel memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="8.jpg" alt="Travel memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="9">
-
-            <div class="photo-number">09</div>
-
-            <div class="photo-hint">
-              travel memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="9.jpg" alt="Travel memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="10">
-
-            <div class="photo-number">10</div>
-
-            <div class="photo-hint">
-              travel memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="10.jpg" alt="Travel memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="11">
-
-            <div class="photo-number">11</div>
-
-            <div class="photo-hint">
-              travel memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="11.jpg" alt="Travel memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="12">
-
-            <div class="photo-number">12</div>
-
-            <div class="photo-hint">
-              travel memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="12.jpg" alt="Travel memory">
           </div>
-
         </div>
 
       </div>
@@ -1440,51 +1110,21 @@ h1,h2{
       <div class="three-grid">
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="13">
-
-            <div class="photo-number">13</div>
-
-            <div class="photo-hint">
-              food 😋
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="13.jpg" alt="Food memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="14">
-
-            <div class="photo-number">14</div>
-
-            <div class="photo-hint">
-              food 😋
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="14.jpg" alt="Food memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="15">
-
-            <div class="photo-number">15</div>
-
-            <div class="photo-hint">
-              food 😋
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="15.jpg" alt="Food memory">
           </div>
-
         </div>
 
       </div>
@@ -1502,7 +1142,9 @@ h1,h2{
 
         <br><br>
 
-        Apan aise hi movies dekhne jayege naye naye jagah pe bike pe ghumenge jo tere papa denge dahej me 😎🙏🏻
+        Apan aise hi movies dekhne jayege
+        naye naye jagah pe bike pe ghumenge
+        jo tere papa denge dahej me 😎🙏🏻
 
       </div>
 
@@ -1510,22 +1152,18 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="16">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              16
-            </div>
-
-            <div class="photo-hint">
-              movies / bike / dahej 😎
-            </div>
+            <img
+              src="16.jpg"
+              alt="Movies bike memory">
 
           </div>
 
           <div class="caption">
+
             future planning is very important 🙏🏻
+
           </div>
 
         </div>
@@ -1541,7 +1179,8 @@ h1,h2{
 
       <div class="letter-text">
 
-        Ab bas isse jyada likhne ko mereko nai jamega 😴😞
+        Ab bas isse jyada likhne ko
+        mereko nai jamega 😴😞
 
         <br><br>
 
@@ -1549,74 +1188,35 @@ h1,h2{
 
         <br><br>
 
-        Ghumenge firenge khayege piyenge bas tu jaldi jaldi tera course khatam karrr
+        Ghumenge firenge khayege piyenge
+        bas tu jaldi jaldi tera course khatam karrr
 
       </div>
 
       <div class="photo-grid">
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="17">
-
-            <div class="photo-number">17</div>
-
-            <div class="photo-hint">
-              us ❤️
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="17.jpg" alt="Us memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="18">
-
-            <div class="photo-number">18</div>
-
-            <div class="photo-hint">
-              memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="18.jpg" alt="Memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="19">
-
-            <div class="photo-number">19</div>
-
-            <div class="photo-hint">
-              memory
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="19.jpg" alt="Memory">
           </div>
-
         </div>
 
         <div class="photo-card">
-
-          <div
-            class="photo-placeholder"
-            data-photo="20">
-
-            <div class="photo-number">20</div>
-
-            <div class="photo-hint">
-              future memory ❤️
-            </div>
-
+          <div class="photo-placeholder">
+            <img src="20.jpg" alt="Future memory">
           </div>
-
         </div>
 
       </div>
@@ -1634,11 +1234,13 @@ h1,h2{
 
         <br><br>
 
-        21 ki hogai me terese bada hu aap bola kar 😈
+        21 ki hogai me terese bada hu
+        aap bola kar 😈
 
         <br><br>
 
-        Kitni bhi badi hojaegi toh merelie toh beakkal hi rahegi 😏
+        Kitni bhi badi hojaegi toh merelie
+        toh beakkal hi rahegi 😏
 
       </div>
 
@@ -1651,22 +1253,19 @@ h1,h2{
 
       <div class="photo-card">
 
-        <div
-          class="photo-placeholder"
-          data-photo="21">
+        <div class="photo-placeholder">
 
-          <div class="photo-number">
-            21
-          </div>
-
-          <div class="photo-hint">
-            beakkal ❤️
-          </div>
+          <img
+            src="21.jpg"
+            alt="Beakkal memory">
 
         </div>
 
         <div class="caption">
-          21 ki hogai... par beakkal toh rahegi 😏
+
+          21 ki hogai...
+          par beakkal toh rahegi 😏
+
         </div>
 
       </div>
@@ -1695,17 +1294,11 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div
-            class="photo-placeholder"
-            data-photo="22">
+          <div class="photo-placeholder">
 
-            <div class="photo-number">
-              22
-            </div>
-
-            <div class="photo-hint">
-              exercise / lazy / sleep 😂
-            </div>
+            <img
+              src="22.jpg"
+              alt="Exercise lazy sleep memory">
 
           </div>
 
@@ -1721,7 +1314,9 @@ h1,h2{
 </section>
 
 
-<!-- MUSIC -->
+<!-- =========================
+     MUSIC
+========================= -->
 
 <section class="music-section">
 
@@ -1761,7 +1356,11 @@ h1,h2{
   </audio>
 
 </section>
-<!-- FINAL -->
+
+
+<!-- =========================
+     FINAL
+========================= -->
 
 <section class="final">
 
@@ -1774,9 +1373,12 @@ h1,h2{
   </div>
 
   <h2>
+
     Happy Birthday
     <br>
+
     Purvviiii ❤️
+
   </h2>
 
   <div class="final-love">
@@ -1784,23 +1386,23 @@ h1,h2{
   </div>
 
   <div class="final-sub">
+
     Ab jaldi se course khatam karrr 😭
     <br>
-    phir apan ghumne jayenge 😎
-  </div>
 
+    phir apan ghumne jayenge 😎
+
+  </div>
 
   <div class="collage">
 
     <div class="photo-card">
 
-      <div
-        class="photo-placeholder"
-        data-photo="1">
+      <div class="photo-placeholder">
 
-        <div class="photo-number">
-          01
-        </div>
+        <img
+          src="1.jpg"
+          alt="Memory">
 
       </div>
 
@@ -1808,13 +1410,11 @@ h1,h2{
 
     <div class="photo-card">
 
-      <div
-        class="photo-placeholder"
-        data-photo="5">
+      <div class="photo-placeholder">
 
-        <div class="photo-number">
-          05
-        </div>
+        <img
+          src="5.jpg"
+          alt="Memory">
 
       </div>
 
@@ -1822,13 +1422,11 @@ h1,h2{
 
     <div class="photo-card">
 
-      <div
-        class="photo-placeholder"
-        data-photo="7">
+      <div class="photo-placeholder">
 
-        <div class="photo-number">
-          07
-        </div>
+        <img
+          src="7.jpg"
+          alt="Memory">
 
       </div>
 
@@ -1839,24 +1437,20 @@ h1,h2{
 </section>
 
 
-<script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-/* =========================
-   INTRO
-========================= */
+<script>
 
 setTimeout(function(){
 
   document
     .getElementById("intro")
-    .classList.add("hide");
+    .style.display="none";
 
 },3000);
 
-
-/* =========================
-   SCOOTY RIDE
-========================= */
 
 const sitButton =
   document.getElementById("sitButton");
@@ -1864,12 +1458,12 @@ const sitButton =
 const scootySection =
   document.getElementById("scootySection");
 
+
 sitButton.addEventListener(
   "click",
   function(){
 
-    scootySection
-      .classList.add("riding");
+    scootySection.classList.add("riding");
 
     setTimeout(function(){
 
@@ -1883,67 +1477,6 @@ sitButton.addEventListener(
 
   }
 );
-
-
-/* =========================
-   LOAD PHOTOS
-========================= */
-
-
-
-  box.appendChild(image);
-
-});
-
-
-/* =========================
-   PHOTO SCROLL ANIMATION
-========================= */
-
-const observer =
-  new IntersectionObserver(
-    function(entries){
-
-      entries.forEach(
-        function(entry){
-
-          if(
-            entry.isIntersecting
-          ){
-
-            entry.target
-              .closest(".photo-card")
-              ?.classList.add(
-                "visible"
-              );
-
-          }
-
-        }
-      );
-
-    },
-    {
-      threshold:.2
-    }
-  );
-
-
-document
-  .querySelectorAll(
-    ".photo-placeholder"
-  )
-  .forEach(function(box){
-
-    observer.observe(box);
-
-  });
-
-
-/* =========================
-   FADE PHOTO CARDS
-========================= */
-
 
 </script>
 
