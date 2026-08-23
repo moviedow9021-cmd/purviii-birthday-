@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>For Purvviiii ❤️</title>
 
@@ -44,50 +47,68 @@ h1,h2{
   margin-bottom:15px;
 }
 
-.center{
-  text-align:center;
-}
-
 
 /* =========================
    INTRO
 ========================= */
 
 #intro{
+
   position:fixed;
+
   inset:0;
+
   z-index:99999;
 
-  background:linear-gradient(
-    145deg,
-    #fff5f5,
-    #ffe8ec
-  );
+  background:
+    linear-gradient(
+      145deg,
+      #fff5f5,
+      #ffe8ec
+    );
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   flex-direction:column;
 
-  transition:opacity 1s ease;
+  transition:
+    opacity 1s ease;
+
 }
 
 #intro.hide{
+
   opacity:0;
+
   pointer-events:none;
+
 }
 
 .intro-heart{
+
   font-size:70px;
-  animation:heartbeat 1.3s infinite;
+
+  animation:
+    heartbeat 1.3s infinite;
+
 }
 
 .intro-text{
+
   margin-top:18px;
+
   font-family:Georgia,serif;
+
   font-size:24px;
+
   color:#7d4d59;
+
   text-align:center;
+
 }
 
 @keyframes heartbeat{
@@ -104,7 +125,7 @@ h1,h2{
 
 
 /* =========================
-   SCOOTY INTRO
+   SCOOTY SECTION
 ========================= */
 
 .scooty-section{
@@ -114,7 +135,9 @@ h1,h2{
   max-width:100%;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   flex-direction:column;
@@ -128,38 +151,44 @@ h1,h2{
   background:
     linear-gradient(
       180deg,
-      #fff8f7 0%,
+      #fff8f7,
       #ffeef2 65%,
-      #f8e5df 100%
+      #f8e5df
     );
 
 }
 
-
-/* SKY DECOR */
-
 .cloud{
+
   position:absolute;
 
   font-size:50px;
 
   opacity:.45;
 
-  animation:cloudMove 18s linear infinite;
+  animation:
+    cloudMove 18s linear infinite;
 
   pointer-events:none;
+
 }
 
 .cloud1{
+
   top:15%;
+
   left:-100px;
+
 }
 
 .cloud2{
+
   top:30%;
+
   left:-250px;
 
   animation-delay:7s;
+
 }
 
 @keyframes cloudMove{
@@ -173,9 +202,6 @@ h1,h2{
   }
 
 }
-
-
-/* TITLE */
 
 .scooty-title{
 
@@ -213,12 +239,10 @@ h1,h2{
 
   overflow:hidden;
 
-  border-bottom:5px solid #9c7b82;
+  border-bottom:
+    5px solid #9c7b82;
 
 }
-
-
-/* MOVING ROAD */
 
 .road-lines{
 
@@ -247,7 +271,9 @@ h1,h2{
 }
 
 .riding .road-lines{
+
   animation-play-state:running;
+
 }
 
 @keyframes roadMove{
@@ -283,12 +309,10 @@ h1,h2{
   z-index:10;
 
   transition:
-    left 3.5s cubic-bezier(.6,0,.9,.4);
+    left 3.5s
+    cubic-bezier(.6,0,.9,.4);
 
 }
-
-
-/* THIS IMAGE WILL LATER BE REPLACED */
 
 .scooty-placeholder{
 
@@ -311,9 +335,6 @@ h1,h2{
     );
 
 }
-
-
-/* RIDE */
 
 .riding .scooty{
 
@@ -368,9 +389,6 @@ h1,h2{
   pointer-events:none;
 
 }
-
-
-/* RIDE MESSAGE */
 
 .ride-message{
 
@@ -454,7 +472,7 @@ h1,h2{
 
 
 /* =========================
-   BIRTHDAY REVEAL
+   REVEAL
 ========================= */
 
 .reveal{
@@ -480,16 +498,19 @@ h1,h2{
   margin-bottom:20px;
 
   animation:
-    cakeFloat 3s ease-in-out infinite;
+    cakeFloat 3s
+    ease-in-out infinite;
 
 }
 
 @keyframes cakeFloat{
 
   50%{
+
     transform:
       translateY(-10px)
       rotate(2deg);
+
   }
 
 }
@@ -575,7 +596,7 @@ h1,h2{
 
 
 /* =========================
-   PHOTO CARDS
+   PHOTOS
 ========================= */
 
 .photo-grid{
@@ -652,6 +673,20 @@ h1,h2{
 
   padding:15px;
 
+  overflow:hidden;
+
+}
+
+.photo-placeholder img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
 }
 
 .photo-number{
@@ -727,6 +762,8 @@ h1,h2{
 
   max-width:850px;
 
+  padding:60px 25px;
+
 }
 
 .music-icon{
@@ -748,6 +785,14 @@ h1,h2{
   color:#98747c;
 
   margin:7px 0 25px;
+
+}
+
+.music-note{
+
+  color:#9a6975;
+
+  font-size:18px;
 
 }
 
@@ -816,11 +861,6 @@ h1,h2{
   color:#81616a;
 
 }
-
-
-/* =========================
-   COLLAGE
-========================= */
 
 .collage{
 
@@ -908,7 +948,9 @@ h1,h2{
 
 <!-- SCOOTY -->
 
-<section class="scooty-section" id="scootySection">
+<section
+  class="scooty-section"
+  id="scootySection">
 
   <div class="cloud cloud1">
     ☁️
@@ -918,30 +960,29 @@ h1,h2{
     ☁️
   </div>
 
-
   <div class="small-label">
     BEFORE WE BEGIN
   </div>
-
 
   <h1 class="scooty-title">
     Chalo baby 🛵❤️
   </h1>
 
-
   <p class="scooty-subtitle">
+
     Pehle scooty pe baitho...
     <br>
     phir birthday adventure shuru karte hain 😏
-  </p>
 
+  </p>
 
   <div class="road">
 
     <div class="road-lines"></div>
 
-
-    <div class="scooty" id="scooty">
+    <div
+      class="scooty"
+      id="scooty">
 
       <div class="scooty-placeholder">
         🛵
@@ -951,7 +992,6 @@ h1,h2{
 
   </div>
 
-
   <button
     class="sit-button"
     id="sitButton">
@@ -959,7 +999,6 @@ h1,h2{
     CLICK TO SIT 🛵
 
   </button>
-
 
   <div class="ride-message">
 
@@ -1060,10 +1099,19 @@ h1,h2{
 
         <div class="photo-card">
 
-          <img
-  src="1.jpg"
-  style="width:100%;height:100%;object-fit:cover;"
-  alt="Cake memory">
+          <div
+            class="photo-placeholder"
+            data-photo="1">
+
+            <div class="photo-number">
+              01
+            </div>
+
+            <div class="photo-hint">
+              cake memory yaha ❤️
+            </div>
+
+          </div>
 
           <div class="caption">
             our very limited cake-cutting history 😭
@@ -1088,7 +1136,7 @@ h1,h2{
 
         Im happy ki tu ab doctor banne wali hai bhot mehnat kiya hai tune ye sab me
 
-        <br>
+        <br><br>
 
         Very proud of you 🥳
 
@@ -1098,7 +1146,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="2">
 
             <div class="photo-number">
               02
@@ -1135,7 +1185,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="3">
 
             <div class="photo-number">
               03
@@ -1152,7 +1204,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="4">
 
             <div class="photo-number">
               04
@@ -1185,7 +1239,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="5">
 
             <div class="photo-number">
               05
@@ -1222,7 +1278,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="6">
 
             <div class="photo-number">
               06
@@ -1247,7 +1305,7 @@ h1,h2{
 
       <div class="letter-text">
 
-        Mere teresath rehna
+        Mere tere sath rehna
 
       </div>
 
@@ -1255,7 +1313,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="7">
 
             <div class="photo-number">
               07
@@ -1285,38 +1345,83 @@ h1,h2{
       <div class="photo-grid">
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="8">
+
             <div class="photo-number">08</div>
-            <div class="photo-hint">travel memory</div>
+
+            <div class="photo-hint">
+              travel memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="9">
+
             <div class="photo-number">09</div>
-            <div class="photo-hint">travel memory</div>
+
+            <div class="photo-hint">
+              travel memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="10">
+
             <div class="photo-number">10</div>
-            <div class="photo-hint">travel memory</div>
+
+            <div class="photo-hint">
+              travel memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="11">
+
             <div class="photo-number">11</div>
-            <div class="photo-hint">travel memory</div>
+
+            <div class="photo-hint">
+              travel memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="12">
+
             <div class="photo-number">12</div>
-            <div class="photo-hint">travel memory</div>
+
+            <div class="photo-hint">
+              travel memory
+            </div>
+
           </div>
+
         </div>
 
       </div>
@@ -1335,24 +1440,51 @@ h1,h2{
       <div class="three-grid">
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="13">
+
             <div class="photo-number">13</div>
-            <div class="photo-hint">food 😋</div>
+
+            <div class="photo-hint">
+              food 😋
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="14">
+
             <div class="photo-number">14</div>
-            <div class="photo-hint">food 😋</div>
+
+            <div class="photo-hint">
+              food 😋
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="15">
+
             <div class="photo-number">15</div>
-            <div class="photo-hint">food 😋</div>
+
+            <div class="photo-hint">
+              food 😋
+            </div>
+
           </div>
+
         </div>
 
       </div>
@@ -1378,7 +1510,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="16">
 
             <div class="photo-number">
               16
@@ -1422,31 +1556,67 @@ h1,h2{
       <div class="photo-grid">
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="17">
+
             <div class="photo-number">17</div>
-            <div class="photo-hint">us ❤️</div>
+
+            <div class="photo-hint">
+              us ❤️
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="18">
+
             <div class="photo-number">18</div>
-            <div class="photo-hint">memory</div>
+
+            <div class="photo-hint">
+              memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="19">
+
             <div class="photo-number">19</div>
-            <div class="photo-hint">memory</div>
+
+            <div class="photo-hint">
+              memory
+            </div>
+
           </div>
+
         </div>
 
         <div class="photo-card">
-          <div class="photo-placeholder">
+
+          <div
+            class="photo-placeholder"
+            data-photo="20">
+
             <div class="photo-number">20</div>
-            <div class="photo-hint">future memory ❤️</div>
+
+            <div class="photo-hint">
+              future memory ❤️
+            </div>
+
           </div>
+
         </div>
 
       </div>
@@ -1454,7 +1624,7 @@ h1,h2{
     </div>
 
 
-    <!-- MONEY / BEAKKAL -->
+    <!-- MONEY JOKE -->
 
     <div class="letter-block">
 
@@ -1481,7 +1651,9 @@ h1,h2{
 
       <div class="photo-card">
 
-        <div class="photo-placeholder">
+        <div
+          class="photo-placeholder"
+          data-photo="21">
 
           <div class="photo-number">
             21
@@ -1508,9 +1680,12 @@ h1,h2{
 
       <div class="letter-text">
 
-        In the end itna hi bolunga aalas kam karrrr excercise kar healthy rehhh
+        In the end itna hi bolunga
+        aalas kam karrrr
+        excercise kar
+        healthy rehhh
 
-        <br>
+        <br><br>
 
         Sotdipana kam kar
 
@@ -1520,7 +1695,9 @@ h1,h2{
 
         <div class="photo-card">
 
-          <div class="photo-placeholder">
+          <div
+            class="photo-placeholder"
+            data-photo="22">
 
             <div class="photo-number">
               22
@@ -1570,16 +1747,20 @@ h1,h2{
 
   <audio
     controls
-    style="margin-top:25px;width:100%;max-width:400px;"
+    style="
+      margin-top:25px;
+      width:100%;
+      max-width:400px;
+    "
   >
+
     <source
       src="tum-se.mp3"
       type="audio/mpeg">
+
   </audio>
 
 </section>
-
-
 <!-- FINAL -->
 
 <section class="final">
@@ -1589,66 +1770,68 @@ h1,h2{
   </div>
 
   <div class="small-label">
-    AND FINALLY...
+    ONE LAST THING
   </div>
 
   <h2>
-
-    HAPPY BIRTHDAY
+    Happy Birthday
     <br>
-    BABY 💕🫂
-
+    Purvviiii ❤️
   </h2>
 
   <div class="final-love">
-
-    I LOVE YOU 😚❤️
-
+    I love youuu 🫂
   </div>
 
   <div class="final-sub">
-
-    — Sachin
-
+    Ab jaldi se course khatam karrr 😭
+    <br>
+    phir apan ghumne jayenge 😎
   </div>
 
 
   <div class="collage">
 
     <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">❤️</div>
+
+      <div
+        class="photo-placeholder"
+        data-photo="1">
+
+        <div class="photo-number">
+          01
+        </div>
+
       </div>
+
     </div>
 
     <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">🥹</div>
+
+      <div
+        class="photo-placeholder"
+        data-photo="5">
+
+        <div class="photo-number">
+          05
+        </div>
+
       </div>
+
     </div>
 
     <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">❤️</div>
-      </div>
-    </div>
 
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">🫂</div>
-      </div>
-    </div>
+      <div
+        class="photo-placeholder"
+        data-photo="7">
 
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">😘</div>
-      </div>
-    </div>
+        <div class="photo-number">
+          07
+        </div>
 
-    <div class="photo-card">
-      <div class="photo-placeholder">
-        <div class="photo-number">❤️</div>
       </div>
+
     </div>
 
   </div>
@@ -1681,18 +1864,12 @@ const sitButton =
 const scootySection =
   document.getElementById("scootySection");
 
-
 sitButton.addEventListener(
   "click",
   function(){
 
-    scootySection.classList.add("riding");
-
-    /*
-      Scooty ride ke baad
-      birthday story par automatically
-      scroll karegi.
-    */
+    scootySection
+      .classList.add("riding");
 
     setTimeout(function(){
 
@@ -1702,32 +1879,129 @@ sitButton.addEventListener(
           behavior:"smooth"
         });
 
-    },3600);
+    },3800);
 
   }
 );
-const placeholders =
-  document.querySelectorAll(".photo-placeholder");
 
-placeholders.forEach(function(box, index) {
 
-  if(index === 0) return;
+/* =========================
+   LOAD PHOTOS
+========================= */
+
+const photos =
+  document.querySelectorAll(
+    ".photo-placeholder[data-photo]"
+  );
+
+photos.forEach(function(box){
+
+  const number =
+    box.getAttribute("data-photo");
 
   const image =
     document.createElement("img");
 
-  image.src = index + ".jpg";
+  image.src =
+    number + ".jpg";
 
-  image.style.width = "100%";
-  image.style.height = "100%";
-  image.style.objectFit = "cover";
+  image.alt =
+    "Memory " + number;
+
+  image.style.width =
+    "100%";
+
+  image.style.height =
+    "100%";
+
+  image.style.objectFit =
+    "cover";
+
+  image.style.display =
+    "block";
+
+  image.onerror =
+    function(){
+
+      console.log(
+        "Photo not found: " +
+        number +
+        ".jpg"
+      );
+
+    };
 
   box.innerHTML = "";
+
   box.appendChild(image);
 
 });
-</script>
 
+
+/* =========================
+   PHOTO SCROLL ANIMATION
+========================= */
+
+const observer =
+  new IntersectionObserver(
+    function(entries){
+
+      entries.forEach(
+        function(entry){
+
+          if(
+            entry.isIntersecting
+          ){
+
+            entry.target
+              .closest(".photo-card")
+              ?.classList.add(
+                "visible"
+              );
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold:.2
+    }
+  );
+
+
+document
+  .querySelectorAll(
+    ".photo-placeholder"
+  )
+  .forEach(function(box){
+
+    observer.observe(box);
+
+  });
+
+
+/* =========================
+   FADE PHOTO CARDS
+========================= */
+
+document
+  .querySelectorAll(
+    ".photo-card"
+  )
+  .forEach(function(card){
+
+    card.style.opacity =
+      "0";
+
+    card.style.transition =
+      "opacity .7s ease, transform .5s ease";
+
+  });
+
+
+</script>
 
 </body>
 </html>
