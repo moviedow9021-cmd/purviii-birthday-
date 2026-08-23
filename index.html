@@ -68,6 +68,23 @@ body{
   0%,100%{transform:scale(1)}
   50%{transform:scale(1.15)}
 }
+  @keyframes introAutoHide{
+  0%{
+    opacity:1;
+    visibility:visible;
+  }
+
+  70%{
+    opacity:1;
+    visibility:visible;
+  }
+
+  100%{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  }
 
 /* ---------- GENERAL ---------- */
 
