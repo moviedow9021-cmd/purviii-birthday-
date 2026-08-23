@@ -992,5 +992,11 @@ p{
 <script>
 
 /* ---------- INTRO ---------- */
-
-window.addEventListener("load",f
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const intro = document.getElementById("intro");
+    if (intro) {
+      intro.classList.add("hide");
+    }
+  }, 1800);
+});
