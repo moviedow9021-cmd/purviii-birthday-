@@ -163,20 +163,24 @@ h1,h2{
   position:relative;
   margin-top:35px;
   overflow:hidden;
-  border-bottom:5px solid #9c7b82;
+
+  background:#555;
+  border-bottom:5px solid #333;
 }
 
 .road-lines{
   position:absolute;
+
   left:0;
-  bottom:32px;
+  bottom:55px;
+
   width:200%;
-  height:5px;
+  height:7px;
 
   background:
     repeating-linear-gradient(
       90deg,
-      #c49da5 0 70px,
+      #fff 0 70px,
       transparent 70px 130px
     );
 }
@@ -236,7 +240,10 @@ h1,h2{
 
 .riding .scooty{
   left:120%;
-}
+  transition:
+    left 3.5s
+    cubic-bezier(.6,0,.9,.4);
+      }
 
 .sit-button{
   margin-top:25px;
