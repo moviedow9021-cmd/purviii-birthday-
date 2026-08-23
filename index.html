@@ -1340,20 +1340,17 @@ h1,h2{
     This little section is waiting for the song ❤️
   </div>
 
-  <audio
-    controls
-    style="
-      margin-top:25px;
-      width:100%;
-      max-width:400px;
-    "
-  >
+<audio
+  id="birthdaySong"
+  loop
+  preload="auto"
+  playsinline>
 
-    <source
-      src="tum-se.mp3"
-      type="audio/mpeg">
+  <source
+    src="tum-se.mp3"
+    type="audio/mpeg">
 
-  </audio>
+</audio>
 
 </section>
 
@@ -1477,7 +1474,26 @@ sitButton.addEventListener(
 
   }
 );
+const birthdaySong =
+  document.getElementById("birthdaySong");
 
+window.addEventListener("load", function(){
+
+  birthdaySong.play().catch(function(){
+
+  });
+
+});
+
+document.addEventListener(
+  "click",
+  function(){
+
+    birthdaySong.play().catch(function(){});
+
+  },
+  {once:true}
+);
 </script>
 
 </body>
