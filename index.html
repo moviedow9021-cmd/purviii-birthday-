@@ -1706,7 +1706,22 @@ sitButton.addEventListener(
 
   }
 );
+const placeholders = document.querySelectorAll(".photo-placeholder");
 
+placeholders.forEach(function(box, index) {
+
+  const image = document.createElement("img");
+
+  image.src = (index + 1) + ".jpg";
+
+  image.style.width = "100%";
+  image.style.height = "100%";
+  image.style.objectFit = "cover";
+
+  box.innerHTML = "";
+  box.appendChild(image);
+
+});
 </script>
 
 
