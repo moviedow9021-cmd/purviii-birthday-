@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Purvviiii ❤️</title>
 
 <style>
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -27,7 +29,7 @@ section{
   width:100%;
   max-width:900px;
   margin:auto;
-  padding:80px 20px;
+  padding:70px 20px;
 }
 
 h1,h2{
@@ -42,22 +44,37 @@ h1,h2{
   margin-bottom:15px;
 }
 
+.center{
+  text-align:center;
+}
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 #intro{
   position:fixed;
   inset:0;
   z-index:99999;
 
-  background:linear-gradient(145deg,#fff5f5,#ffe8ec);
+  background:linear-gradient(
+    145deg,
+    #fff5f5,
+    #ffe8ec
+  );
 
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
 
-  animation:introDisappear 3s forwards;
+  transition:opacity 1s ease;
+}
+
+#intro.hide{
+  opacity:0;
+  pointer-events:none;
 }
 
 .intro-heart{
@@ -73,23 +90,6 @@ h1,h2{
   text-align:center;
 }
 
-@keyframes introDisappear{
-
-  0%{
-    opacity:1;
-  }
-
-  70%{
-    opacity:1;
-  }
-
-  100%{
-    opacity:0;
-    visibility:hidden;
-  }
-
-}
-
 @keyframes heartbeat{
 
   0%,100%{
@@ -103,270 +103,547 @@ h1,h2{
 }
 
 
-/* HERO */
+/* =========================
+   SCOOTY INTRO
+========================= */
 
-.hero{
+.scooty-section{
+
   min-height:100vh;
+
+  max-width:100%;
 
   display:flex;
   align-items:center;
   justify-content:center;
+
   flex-direction:column;
 
   text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff8f7 0%,
+      #ffeef2 65%,
+      #f8e5df 100%
+    );
+
+}
+
+
+/* SKY DECOR */
+
+.cloud{
+  position:absolute;
+
+  font-size:50px;
+
+  opacity:.45;
+
+  animation:cloudMove 18s linear infinite;
+
+  pointer-events:none;
+}
+
+.cloud1{
+  top:15%;
+  left:-100px;
+}
+
+.cloud2{
+  top:30%;
+  left:-250px;
+
+  animation-delay:7s;
+}
+
+@keyframes cloudMove{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(120vw);
+  }
+
+}
+
+
+/* TITLE */
+
+.scooty-title{
+
+  font-size:
+    clamp(40px,9vw,70px);
+
+  color:#633f49;
+
+  margin-bottom:10px;
+
+}
+
+.scooty-subtitle{
+
+  font-size:22px;
+
+  color:#80636b;
+
+  line-height:1.6;
+
+}
+
+
+/* ROAD */
+
+.road{
+
+  width:100%;
+
+  height:210px;
+
+  position:relative;
+
+  margin-top:35px;
+
+  overflow:hidden;
+
+  border-bottom:5px solid #9c7b82;
+
+}
+
+
+/* MOVING ROAD */
+
+.road-lines{
+
+  position:absolute;
+
+  left:0;
+
+  bottom:32px;
+
+  width:200%;
+
+  height:5px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #c49da5 0 70px,
+      transparent 70px 130px
+    );
+
+  animation:
+    roadMove .8s linear infinite;
+
+  animation-play-state:paused;
+
+}
+
+.riding .road-lines{
+  animation-play-state:running;
+}
+
+@keyframes roadMove{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-130px);
+  }
+
+}
+
+
+/* SCOOTY */
+
+.scooty{
+
+  position:absolute;
+
+  left:50%;
+
+  bottom:35px;
+
+  transform:
+    translateX(-50%);
+
+  width:180px;
+
+  height:130px;
+
+  z-index:10;
+
+  transition:
+    left 3.5s cubic-bezier(.6,0,.9,.4);
+
+}
+
+
+/* THIS IMAGE WILL LATER BE REPLACED */
+
+.scooty-placeholder{
+
+  width:180px;
+
+  height:110px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:100px;
+
+  filter:
+    drop-shadow(
+      0 12px 12px
+      rgba(80,40,50,.2)
+    );
+
+}
+
+
+/* RIDE */
+
+.riding .scooty{
+
+  left:120%;
+
+}
+
+
+/* BUTTON */
+
+.sit-button{
+
+  margin-top:25px;
+
+  border:none;
+
+  border-radius:50px;
+
+  padding:
+    16px 30px;
+
+  background:#d98799;
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(120,50,70,.2);
+
+  transition:
+    transform .2s ease,
+    opacity .4s ease;
+
+}
+
+.sit-button:active{
+
+  transform:scale(.94);
+
+}
+
+.riding .sit-button{
+
+  opacity:0;
+
+  pointer-events:none;
+
+}
+
+
+/* RIDE MESSAGE */
+
+.ride-message{
+
+  position:absolute;
+
+  bottom:25px;
+
+  left:50%;
+
+  transform:
+    translate(-50%,20px);
+
+  opacity:0;
+
+  font-size:21px;
+
+  color:#8d5967;
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+
+}
+
+.riding .ride-message{
+
+  opacity:1;
+
+  transform:
+    translate(-50%,0);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-direction:column;
+
+  text-align:center;
+
 }
 
 .hero .tiny{
+
   font-size:25px;
+
   color:#a86a78;
+
 }
 
 .hero h1{
-  font-size:clamp(50px,12vw,100px);
+
+  font-size:
+    clamp(50px,12vw,100px);
+
   color:#593c45;
+
   margin:5px 0;
+
 }
 
 .hero .subtitle{
+
   font-size:25px;
+
   color:#9a6673;
-}
 
-.scroll{
-  margin-top:50px;
-  font-size:13px;
-  color:#a9848c;
 }
 
 
-/* ENVELOPE */
-
-.envelope-area{
-  min-height:100vh;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-}
-
-.envelope{
-  width:280px;
-  height:190px;
-  position:relative;
-  cursor:pointer;
-
-  filter:drop-shadow(0 15px 25px rgba(100,50,60,.15));
-}
-
-.env-body{
-  position:absolute;
-  inset:0;
-
-  background:#f2cbd1;
-  border-radius:4px;
-  overflow:hidden;
-}
-
-.env-body:before,
-.env-body:after{
-  content:"";
-  position:absolute;
-  bottom:0;
-
-  width:0;
-  height:0;
-
-  border-style:solid;
-}
-
-.env-body:before{
-  left:0;
-
-  border-width:95px 140px 0 0;
-  border-color:#e9b9c2 transparent transparent transparent;
-}
-
-.env-body:after{
-  right:0;
-
-  border-width:95px 0 0 140px;
-  border-color:#e4aeb9 transparent transparent transparent;
-}
-
-.flap{
-  position:absolute;
-
-  top:0;
-  left:0;
-
-  width:0;
-  height:0;
-
-  border-left:140px solid transparent;
-  border-right:140px solid transparent;
-  border-top:100px solid #dfa6b1;
-
-  transform-origin:top;
-
-  transition:transform 1s ease;
-
-  z-index:4;
-}
-
-.envelope.open .flap{
-  transform:rotateX(180deg);
-}
-
-.letter-card{
-  position:absolute;
-
-  width:230px;
-  height:170px;
-
-  background:#fffdfb;
-
-  left:25px;
-  top:10px;
-
-  z-index:5;
-
-  transition:transform 1s ease;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-
-  padding:20px;
-
-  font-size:25px;
-
-  color:#76515b;
-}
-
-.envelope.open .letter-card{
-  transform:translateY(-180px);
-}
-
-.tap-text{
-  margin-top:90px;
-
-  font-size:25px;
-
-  color:#936875;
-}
-
-
-/* BIRTHDAY REVEAL */
+/* =========================
+   BIRTHDAY REVEAL
+========================= */
 
 .reveal{
+
   min-height:90vh;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   flex-direction:column;
 
   text-align:center;
+
 }
 
 .cake{
+
   font-size:85px;
+
   margin-bottom:20px;
+
+  animation:
+    cakeFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes cakeFloat{
+
+  50%{
+    transform:
+      translateY(-10px)
+      rotate(2deg);
+  }
+
 }
 
 .reveal h2{
-  font-size:clamp(38px,8vw,65px);
+
+  font-size:
+    clamp(38px,8vw,65px);
+
   color:#633f49;
+
 }
 
 .reveal p{
+
   max-width:600px;
+
   color:#80636b;
+
+  line-height:1.8;
+
 }
 
 
-/* MEMORY */
+/* =========================
+   MEMORY
+========================= */
 
 .memory-section{
+
   background:#fff;
+
   max-width:100%;
+
 }
 
 .memory-intro{
+
   max-width:900px;
-  margin:0 auto 50px;
+
+  margin:
+    0 auto 50px;
+
   text-align:center;
+
 }
 
 .memory-intro p{
+
   max-width:600px;
+
   margin:auto;
+
   color:#866b72;
+
+  line-height:1.8;
+
 }
 
 .letter{
+
   max-width:720px;
+
   margin:auto;
+
 }
 
 .letter-block{
+
   margin:70px 0;
+
 }
 
 .letter-text{
+
   font-size:27px;
+
   line-height:1.55;
+
   color:#4c3940;
+
 }
 
 
-/* PHOTOS */
+/* =========================
+   PHOTO CARDS
+========================= */
 
 .photo-grid{
+
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap:25px;
+
   margin:30px 0;
+
 }
 
 .photo-card{
+
   background:#fff;
 
-  padding:12px 12px 28px;
+  padding:
+    12px 12px 28px;
 
-  box-shadow:0 12px 30px rgba(70,35,45,.12);
+  box-shadow:
+    0 12px 30px
+    rgba(70,35,45,.12);
 
-  transform:rotate(-2deg);
+  transform:
+    rotate(-2deg);
 
-  transition:transform .5s ease;
+  transition:
+    transform .5s ease;
 
-  opacity:1;
 }
 
 .photo-card:nth-child(even){
-  transform:rotate(2.5deg);
+
+  transform:
+    rotate(2.5deg);
+
 }
 
 .photo-card:hover{
-  transform:rotate(0deg) scale(1.03);
+
+  transform:
+    rotate(0deg)
+    scale(1.03);
+
 }
 
 .photo-placeholder{
+
   width:100%;
+
   aspect-ratio:1/1;
 
-  background:linear-gradient(
-    135deg,
-    #f6dfe3,
-    #fdf3f1
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #f6dfe3,
+      #fdf3f1
+    );
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   flex-direction:column;
 
   color:#aa7d87;
@@ -374,85 +651,113 @@ h1,h2{
   text-align:center;
 
   padding:15px;
+
 }
 
 .photo-number{
+
   font-family:Georgia,serif;
+
   font-size:35px;
+
   color:#b47c87;
+
 }
 
 .photo-hint{
+
   font-size:20px;
+
   margin-top:7px;
+
 }
 
 .caption{
+
   font-size:20px;
+
   margin-top:8px;
+
   text-align:center;
+
   color:#76545e;
+
 }
 
 .single-photo{
+
   max-width:430px;
+
   margin:35px auto;
+
 }
 
 .three-grid{
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:15px;
+
   margin:30px 0;
-}
 
-.three-grid .photo-card{
-  padding:8px 8px 20px;
 }
 
 
-/* MUSIC */
+/* =========================
+   MUSIC
+========================= */
 
 .music-section{
+
   text-align:center;
 
-  background:linear-gradient(
-    145deg,
-    #fff1f3,
-    #fffaf9
-  );
+  background:
+    linear-gradient(
+      145deg,
+      #fff1f3,
+      #fffaf9
+    );
 
   border-radius:30px;
 
   margin:60px auto;
 
   max-width:850px;
+
 }
 
 .music-icon{
+
   font-size:55px;
-  margin-bottom:15px;
+
 }
 
 .music-title{
+
   font-family:Georgia,serif;
+
   font-size:28px;
+
 }
 
 .music-artist{
+
   color:#98747c;
+
   margin:7px 0 25px;
-}
 
-.music-note{
-  font-size:20px;
-  color:#9a6975;
 }
 
 
-/* FINAL */
+/* =========================
+   FINAL
+========================= */
 
 .final{
+
   min-height:100vh;
 
   display:flex;
@@ -465,98 +770,128 @@ h1,h2{
 
   text-align:center;
 
-  background:radial-gradient(
-    circle at center,
-    #fff0f3,
-    #fff8f7 60%
-  );
+  background:
+    radial-gradient(
+      circle at center,
+      #fff0f3,
+      #fff8f7 60%
+    );
+
 }
 
 .final-heart{
+
   font-size:90px;
+
+  animation:
+    heartbeat 1.3s infinite;
+
 }
 
 .final h2{
-  font-size:clamp(40px,9vw,75px);
+
+  font-size:
+    clamp(40px,9vw,75px);
+
   color:#633e49;
+
 }
 
 .final-love{
+
   font-size:38px;
+
   color:#9c5969;
+
   margin-top:10px;
+
 }
 
 .final-sub{
+
   margin-top:30px;
+
   font-size:25px;
+
   color:#81616a;
+
 }
 
 
-/* COLLAGE */
+/* =========================
+   COLLAGE
+========================= */
 
 .collage{
+
   max-width:700px;
+
   margin:50px auto;
 
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
 
   gap:12px;
-}
 
-.collage .photo-placeholder{
-  aspect-ratio:1/1;
-}
-
-.collage .photo-card{
-  padding:7px;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
   section{
-    padding:65px 17px;
+
+    padding:
+      60px 17px;
+
   }
 
   .letter-text{
+
     font-size:25px;
+
   }
 
   .photo-grid{
+
     gap:16px;
+
   }
 
   .three-grid{
+
     gap:8px;
+
   }
 
-  .photo-card{
-    padding:8px 8px 20px;
+  .scooty{
+
+    width:140px;
+
   }
 
-  .caption{
-    font-size:18px;
-  }
+  .scooty-placeholder{
 
-  .envelope{
-    transform:scale(.9);
-  }
+    width:140px;
 
-  .collage{
-    gap:7px;
+    font-size:80px;
+
   }
 
 }
+
 </style>
 </head>
 
 <body>
-  <!-- INTRO -->
+
+
+<!-- INTRO -->
 
 <div id="intro">
 
@@ -569,6 +904,70 @@ h1,h2{
   </div>
 
 </div>
+
+
+<!-- SCOOTY -->
+
+<section class="scooty-section" id="scootySection">
+
+  <div class="cloud cloud1">
+    ☁️
+  </div>
+
+  <div class="cloud cloud2">
+    ☁️
+  </div>
+
+
+  <div class="small-label">
+    BEFORE WE BEGIN
+  </div>
+
+
+  <h1 class="scooty-title">
+    Chalo baby 🛵❤️
+  </h1>
+
+
+  <p class="scooty-subtitle">
+    Pehle scooty pe baitho...
+    <br>
+    phir birthday adventure shuru karte hain 😏
+  </p>
+
+
+  <div class="road">
+
+    <div class="road-lines"></div>
+
+
+    <div class="scooty" id="scooty">
+
+      <div class="scooty-placeholder">
+        🛵
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <button
+    class="sit-button"
+    id="sitButton">
+
+    CLICK TO SIT 🛵
+
+  </button>
+
+
+  <div class="ride-message">
+
+    Hold tight, Purvviiii... ❤️
+
+  </div>
+
+</section>
 
 
 <!-- HERO -->
@@ -587,42 +986,7 @@ h1,h2{
     for my favourite human ❤️
   </div>
 
-  <div class="scroll">
-    scroll slowly ↓
-  </div>
-
 </section>
-
-
-<!-- ENVELOPE -->
-
-<section class="envelope-area">
-
-  <div class="small-label">
-    OPEN THIS
-  </div>
-
-  <div class="envelope" id="envelope">
-
-    <div class="env-body"></div>
-
-    <div class="letter-card">
-      For my baby ❤️
-      <br>
-      who is somehow 21 now.
-    </div>
-
-    <div class="flap"></div>
-
-  </div>
-
-  <div class="tap-text">
-    tap the envelope 🤍
-  </div>
-
-</section>
-
-
 <!-- BIRTHDAY REVEAL -->
 
 <section class="reveal">
@@ -1001,7 +1365,9 @@ h1,h2{
       </div>
 
     </div>
-        <!-- PHOTO 16 -->
+
+
+    <!-- PHOTO 16 -->
 
     <div class="letter-block">
 
@@ -1095,7 +1461,7 @@ h1,h2{
     </div>
 
 
-    <!-- LAST PART OF LETTER -->
+    <!-- MONEY / BEAKKAL -->
 
     <div class="letter-block">
 
@@ -1180,8 +1546,6 @@ h1,h2{
     </div>
 
 
-    <!-- END LETTER -->
-
   </div>
 
 </section>
@@ -1215,7 +1579,9 @@ h1,h2{
     controls
     style="margin-top:25px;width:100%;max-width:400px;"
   >
-    <source src="tum-se.mp3" type="audio/mpeg">
+    <source
+      src="tum-se.mp3"
+      type="audio/mpeg">
   </audio>
 
 </section>
@@ -1234,17 +1600,23 @@ h1,h2{
   </div>
 
   <h2>
+
     HAPPY BIRTHDAY
     <br>
     BABY 💕🫂
+
   </h2>
 
   <div class="final-love">
+
     I LOVE YOU 😚❤️
+
   </div>
 
   <div class="final-sub">
+
     — Sachin
+
   </div>
 
 
@@ -1293,49 +1665,57 @@ h1,h2{
 
 <script>
 
-/* ENVELOPE */
+/* =========================
+   INTRO
+========================= */
 
-const envelope =
-document.getElementById("envelope");
+setTimeout(function(){
 
-envelope.addEventListener(
+  document
+    .getElementById("intro")
+    .classList.add("hide");
+
+},3000);
+
+
+/* =========================
+   SCOOTY RIDE
+========================= */
+
+const sitButton =
+  document.getElementById("sitButton");
+
+const scootySection =
+  document.getElementById("scootySection");
+
+
+sitButton.addEventListener(
   "click",
   function(){
 
-    envelope.classList.toggle("open");
+    scootySection.classList.add("riding");
 
-  }
-);
+    /*
+      Scooty ride ke baad
+      birthday story par automatically
+      scroll karegi.
+    */
 
+    setTimeout(function(){
 
-/* SIMPLE PHOTO ANIMATION */
+      document
+        .querySelector(".hero")
+        .scrollIntoView({
+          behavior:"smooth"
+        });
 
-const cards =
-document.querySelectorAll(".photo-card");
-
-window.addEventListener(
-  "scroll",
-  function(){
-
-    cards.forEach(
-      function(card){
-
-        const position =
-          card.getBoundingClientRect().top;
-
-        if(position < window.innerHeight - 80){
-
-          card.style.opacity="1";
-
-        }
-
-      }
-    );
+    },3600);
 
   }
 );
 
 </script>
+
 
 </body>
 </html>
