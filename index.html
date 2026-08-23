@@ -1706,13 +1706,17 @@ sitButton.addEventListener(
 
   }
 );
-const placeholders = document.querySelectorAll(".photo-placeholder");
+const placeholders =
+  document.querySelectorAll(".photo-placeholder");
 
 placeholders.forEach(function(box, index) {
 
-  const image = document.createElement("img");
+  if(index === 0) return;
 
-  image.src = (index + 1) + ".jpg";
+  const image =
+    document.createElement("img");
+
+  image.src = index + ".jpg";
 
   image.style.width = "100%";
   image.style.height = "100%";
