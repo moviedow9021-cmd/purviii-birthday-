@@ -215,6 +215,13 @@ h1,h2{
 .scooty-placeholder{
   width:180px;
   height:110px;
+    overflow:hidden;
+  .scooty-placeholder img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  }
 
   display:flex;
   align-items:center;
@@ -718,7 +725,7 @@ h1,h2{
       id="scooty">
 
       <div class="scooty-placeholder">
-        🛵
+        <img src="scooty.png" alt="Scooty">
       </div>
 
     </div>
