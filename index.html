@@ -663,7 +663,130 @@ h1,h2{
   }
 
 }
+#birthdayCelebration{
+  position:fixed;
+  inset:0;
+  z-index:999999;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+
+  background:rgba(255,248,247,.97);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:opacity .5s ease;
+
+  pointer-events:none;
+}
+
+#birthdayCelebration.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.birthdayMessage{
+  text-align:center;
+
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(42px,10vw,85px);
+
+  font-weight:bold;
+
+  color:#633f49;
+
+  line-height:1.2;
+
+  transform:scale(.5);
+
+  animation:
+    birthdayPop .8s
+    cubic-bezier(.17,.89,.32,1.4)
+    forwards;
+
+  animation-play-state:paused;
+}
+
+#birthdayCelebration.show .birthdayMessage{
+  animation-play-state:running;
+}
+
+@keyframes birthdayPop{
+
+  0%{
+    transform:scale(.5);
+    opacity:0;
+  }
+
+  70%{
+    transform:scale(1.12);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+.confetti{
+  position:absolute;
+
+  top:-80px;
+
+  font-size:55px;
+
+  animation:
+    confettiFall 2.5s
+    ease-in
+    forwards;
+
+  animation-play-state:paused;
+}
+
+#birthdayCelebration.show .confetti{
+  animation-play-state:running;
+}
+
+.confetti:nth-child(1){
+  left:15%;
+}
+
+.confetti:nth-child(2){
+  left:38%;
+  animation-delay:.2s;
+}
+
+.confetti:nth-child(3){
+  left:65%;
+  animation-delay:.4s;
+}
+
+.confetti:nth-child(4){
+  left:85%;
+  animation-delay:.1s;
+}
+
+@keyframes confettiFall{
+
+  0%{
+    top:-80px;
+    transform:rotate(0deg) scale(.7);
+  }
+
+  100%{
+    top:110%;
+    transform:rotate(720deg) scale(1.2);
+  }
+
+}
+  
 </style>
 </head>
 
@@ -1477,13 +1600,24 @@ sitButton.addEventListener("click", function(){
 
   setTimeout(function(){
 
+  const celebration =
+    document.getElementById("birthdayCelebration");
+
+  celebration.classList.add("show");
+
+  setTimeout(function(){
+
+    celebration.classList.remove("show");
+
     document
       .querySelector(".hero")
       .scrollIntoView({
         behavior:"smooth"
       });
 
-  }, 3800);
+  }, 3500);
+
+}, 3800);
 
 });
 const birthdaySong =
@@ -1507,6 +1641,20 @@ document.addEventListener(
   {once:true}
 );
 </script>
+<div id="birthdayCelebration">
 
+  <div class="confetti">🎉</div>
+  <div class="confetti">🎊</div>
+  <div class="confetti">🎉</div>
+  <div class="confetti">🎊</div>
+
+  <div class="birthdayMessage">
+    HAPPY BIRTHDAY
+    <br>
+    PURVIIIII ❤️
+  </div>
+
+</div>
+  
 </body>
 </html>
